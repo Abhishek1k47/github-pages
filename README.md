@@ -1,48 +1,144 @@
-# GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+    .profile-container {
+      display: flex;
+      height: 100vh;
+      background: #f8f9fa;
+    }
 
-## Welcome
+    .sidebar {
+      width: 250px;
+      background: white;
+      padding: 20px;
+      border-right: 1px solid #e0e0e0;
+    }
 
-- **Who is this for**: Beginners, students, project maintainers, small businesses.
-- **What you'll learn**: How to build a GitHub Pages site.
-- **What you'll build**: We'll build a simple GitHub Pages site with a blog. We'll use [Jekyll](https://jekyllrb.com), a static site generator.
-- **Prerequisites**: If you need to learn about branches, commits, and pull requests, take [Introduction to GitHub](https://github.com/skills/introduction-to-github) first.
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
 
-- **How long**: This exercise takes less than one hour to complete.
+    .sidebar h3 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
 
-In this exercise, you will:
+    .sidebar p {
+      font-size: 14px;
+      margin: 4px 0;
+      color: #666;
+    }
 
-1. Enable GitHub Pages
-1. Configure your site
-1. Customize your home page
-1. Create a blog post
-1. Merge your pull request
+    .sidebar ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 20px;
+    }
 
+    .sidebar ul li {
+      padding: 10px 0;
+      font-size: 15px;
+      color: #444;
+      cursor: pointer;
+    }
 
-### How to start this exercise
+    .active-btn {
+      margin-top: 20px;
+      padding: 10px;
+      background: #4b2aad;
+      color: white;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+    .main-form {
+      flex-grow: 1;
+      padding: 40px;
+      background: #f1f4f8;
+    }
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=github-pages&owner=%40me&name=skills-github-pages&description=Exercise:+Create+a+site+or+blog+from+your+GitHub+repositories+with+GitHub+Pages&visibility=public)
+    .main-form h2 {
+      margin-bottom: 20px;
+    }
 
-<details>
-<summary>Having trouble? 🤷</summary><br/>
+    .main-form form {
+      max-width: 500px;
+    }
 
-When copying the exercise, we recommend the following settings:
+    .main-form input,
+    .main-form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
 
-- For owner, choose your personal account or an organization to host the repository.
+    .main-form button {
+      margin-top: 15px;
+      background: #4b2aad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="sidebar">
+      <img src="https://via.placeholder.com/100" class="avatar" />
+      <h3>John Doe</h3>
+      <p>Patient ID: 123456</p>
+      <p>Male</p>
+      <ul>
+        <li>My Appointments</li>
+        <li>Favourites</li>
+        <li>Help</li>
+        <li>My Wallet</li>
+        <li>Messages</li>
+        <li>Notifications</li>
+      </ul>
+      <button class="active-btn">Profile Settings</button>
+    </div>
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+    <div class="main-form">
+      <h2>Profile Settings</h2>
+      <form>
+        <label>Upload Image</label><br>
+        <input type="file" /><br><br>
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
-
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
-
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
-
-</details>
-
----
-
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+        <input type="text" placeholder="Enter Name" />
+        <input type="email" placeholder="Enter Email" />
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <input type="tel" placeholder="Mobile Number" />
+        <input type="date" />
+        <select>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
